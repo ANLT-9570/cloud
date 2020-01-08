@@ -1,0 +1,13 @@
+server:
+  port: 20011
+
+spring:
+  application:
+    name: Server-Provider2   #服务名称
+eureka:
+  client:
+    register-with-eureka: true  #表示是否将服务注册到Eureka服务端，由于自身不是Eureka服务端，所以设置为true；
+    fetch-registry: true   #是否需要检索服务，因为自身不是注册中心，所以这里设置为true；
+    service-url:            #
+      defaultZone: http://120.79.42.229:8888/eureka/,http://120.79.42.229:7777/eureka/,http://120.79.42.229:9999/eureka/  #指定Eureka服务端的地址 集群的时候指向多个服务
+
